@@ -1,17 +1,18 @@
 package com.io.projetoJpa.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import jakarta.persistence.*;
 
-@Entity
+@Document
 public class Regras {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long codigo;
+	private String codigo;
 	private String nome;
-	public Long getCodigo() {
+	public String getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(Long codigo) {
+	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
 	public String getNome() {
